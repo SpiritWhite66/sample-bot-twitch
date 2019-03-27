@@ -5,6 +5,29 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144631_added_entity_AppUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144632_added_entity_OverWriteCalendar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144633_added_entity_DefaultCalendar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144634_added_entity_StreamCalendar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144635_added_entity_ProgramTwitch.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144636_added_entity_Availability.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144637_added_entity_WeekAvailability.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144638_added_entity_CommentAvailability.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144639_added_entity_RefCategoriesStream.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144640_added_entity_Bot.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144641_added_entity_ActionBot.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144642_added_entity_MessageBot.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20190327144632_added_entity_constraints_OverWriteCalendar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144633_added_entity_constraints_DefaultCalendar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144634_added_entity_constraints_StreamCalendar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144635_added_entity_constraints_ProgramTwitch.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144636_added_entity_constraints_Availability.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144637_added_entity_constraints_WeekAvailability.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144638_added_entity_constraints_CommentAvailability.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144640_added_entity_constraints_Bot.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144641_added_entity_constraints_ActionBot.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144642_added_entity_constraints_MessageBot.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327144631_added_entity_constraints_AppUser.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

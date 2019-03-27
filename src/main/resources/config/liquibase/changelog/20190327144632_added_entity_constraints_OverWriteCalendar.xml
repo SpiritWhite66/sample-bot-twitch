@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity OverWriteCalendar.
+    -->
+    <changeSet id="20190327144632-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="default_calendar_id"
+                                 baseTableName="over_write_calendar"
+                                 constraintName="fk_over_write_calendar_default_calendar_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="default_calendar"/>
+
+        <addForeignKeyConstraint baseColumnNames="app_user_id"
+                                 baseTableName="over_write_calendar"
+                                 constraintName="fk_over_write_calendar_app_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="app_user"/>
+
+    </changeSet>
+</databaseChangeLog>

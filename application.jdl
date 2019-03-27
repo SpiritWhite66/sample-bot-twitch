@@ -1,0 +1,84 @@
+entity AppUser {
+  name String,
+  email String,
+  phone String,
+  role Role
+}
+
+entity OverWriteCalendar {
+    date LocalDate,
+    status Boolean,
+}
+
+entity DefaultCalendar  {
+	day DayEnum,
+}
+
+entity StreamCalendar  {
+  activate Boolean
+}
+
+entity DefaultCalendar  {
+  date LocalDate,
+  email String ,
+  phone String
+}
+entity ProgramTwitch {
+	name String,
+    link String
+}
+
+entity Availability {
+ date LocalDate
+}
+
+entity WeekAvailability {
+}
+
+entity CommentAvailability {
+	comment String
+}
+
+entity RefCategoriesStream{
+	codeCategory String, 
+    labelCategory String
+}
+entity Bot {
+	name String
+}
+entity ActionBot {
+	name String, 
+    command String,
+    role Role
+}
+entity MessageBot {
+	codeMessage String, 
+    labelMessage String,
+    frequence Integer
+}
+relationship OneToMany {
+	AppUser to WeekAvailability
+    WeekAvailability to CommentAvailability
+    AppUser to OverWriteCalendar
+    WeekAvailability to Availability
+    ProgramTwitch to Bot
+    Bot to ActionBot
+    ActionBot to MessageBot
+}
+relationship ManyToMany {
+    AppUser to ProgramTwitch
+}
+relationship ManyToOne {
+    ProgramTwitch to RefCategoriesStream
+    DefaultCalendar to StreamCalendar
+    OverWriteCalendar to DefaultCalendar
+}
+relationship OneToOne {
+	StreamCalendar to ProgramTwitch
+}
+enum DayEnum {
+    LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE
+}
+enum Role {
+    MODERATOR, STREAMER, VIEWER
+}
